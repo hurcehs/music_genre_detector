@@ -70,7 +70,7 @@ def upload_file():
             x = np.reshape(x, (1, input_shape[1], input_shape[2], input_shape[3]))
 
             pred_index = np.argmax(model.predict(x))
-            pred_answer = "予想されたジャンル：" +  labels[pred_index]
+            pred_answer = "予想されたジャンル" +  labels[pred_index]
 
             return render_template("index.html",answer=pred_answer)
 
